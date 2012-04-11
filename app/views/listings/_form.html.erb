@@ -1,4 +1,5 @@
-<%= form_for(@listing) do |f| %>
+
+<%= form_for @listing, :html => {:class => 'nice '} do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
@@ -10,44 +11,50 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="six columns">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'input-text' %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+        <%= f.label :email %>
+        <%= f.text_field :email, :class => 'input-text' %>
+
+
+        <label for="">Low End of Budget (for whole listing period)</label>
+
+        <%= f.number_field :low_budget, :class => 'input-text' %>
+
+      <label for="">High End of Budget (for whole listing period)</label>
+        <%= f.number_field :high_budget, :class => 'input-text' %>
+        <%= f.label :start %>
+        <%= f.date_select :start %>
+
+
+        <%= f.label :end %>
+        <%= f.date_select :end %>
+    </div>
+    <div class="six columns last">
+
+
+
+      <%= f.label :location %>
+      <%= f.text_field :location, :class => 'input-text' %>
+
+
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+
+      Check if you're subletting your place (leave blank if renting)
+      <%= f.check_box :seller %>
+    </div>
+    
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    Low End of Budget (for whole listing period)<br />
-    <%= f.number_field :low_budget %>
-  </div>
-  <div class="field">
-    High End of Budget (for whole listing period)<br />
-    <%= f.number_field :high_budget %>
-  </div>
-  <div class="field">
-    <%= f.label :start %><br />
-    <%= f.date_select :start %>
-  </div>
-  <div class="field">
-    <%= f.label :end %><br />
-    <%= f.date_select :end %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    Check if you're subletting your place (leave blank if renting)<br />
-    <%= f.check_box :seller %>
-  </div>
+
+  
+
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create that shit', :class => 'nice large button' %>
   </div>
 <% end %>

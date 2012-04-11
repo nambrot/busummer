@@ -9,5 +9,40 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require foundation
  *= require_tree .
 */
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+header {
+
+}
+.container {
+  margin-top: 20px;
+}
+header h1 {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.new-listing a {
+  color: white;
+}
+
+.new-listing {
+ 
+ padding-top: 40px;
+ padding-bottom: 40px;
+}
+
+table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+select {
+  height: 30px;
+  font-size: 20px;
+  display: inline !important;
+}

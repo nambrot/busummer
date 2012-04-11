@@ -1,39 +1,100 @@
-<h1>Listing listings</h1>
+<div class="row">
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Low budget</th>
-    <th>High budget</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Location</th>
-    <th>Description</th>
-    <th>Seller</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+</div>
+<header class="row">
+  <div class="eight columns offset-by-two">
+     <h1>Boston Summer Housing</h1>
+  </div>
+</header>
+<div class="row new-listing">
+  <div class="five columns centered ">
+    <%= link_to 'New Listing', new_listing_path, :class => 'large round nice button' %>
+  </div>
+</div>
 
-<% @listings.each do |listing| %>
-  <tr>
-    <td><%= listing.name %></td>
-    <td><%= listing.email %></td>
-    <td><%= listing.low_budget %></td>
-    <td><%= listing.high_budget %></td>
-    <td><%= listing.start %></td>
-    <td><%= listing.end %></td>
-    <td><%= listing.location %></td>
-    <td><%= listing.description %></td>
-    <td><%= listing.seller %></td>
-    <td><%= link_to 'Show', listing %></td>
-    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-    <td><%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div class="row">
+  <header>
+    <h3>
+      People Subletting
+    </h3>
+  </header>
+</div>
+<div class="row">
+  <div class="twelve columns centered">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Low budget</th>
+          <th>High budget</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Location</th>
+          <th>Description</th>
+          <th>Seller</th>
+        </tr>
+      </thead>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.name %></td>
+        <td><%= listing.email %></td>
+        <td><%= listing.low_budget %></td>
+        <td><%= listing.high_budget %></td>
+        <td><%= listing.start %></td>
+        <td><%= listing.end %></td>
+        <td><%= listing.location %></td>
+        <td><%= listing.description %></td>
+        <td><%= listing.seller %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<br />
 
-<%= link_to 'New Listing', new_listing_path %>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <header>
+    <h3>
+      People Looking to Rent
+    </h3>
+  </header>
+</div>
+<div class="row">
+  <div class="twelve columns centered">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Low budget</th>
+          <th>High budget</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Location</th>
+          <th>Description</th>
+          <th>Seller</th>
+        </tr>
+      </thead>
+    <% @listings2.each do |listing| %>
+      <tr>
+        <td><%= listing.name %></td>
+        <td><%= listing.email %></td>
+        <td><%= listing.low_budget %></td>
+        <td><%= listing.high_budget %></td>
+        <td><%= listing.start %></td>
+        <td><%= listing.end %></td>
+        <td><%= listing.location %></td>
+        <td><%= listing.description %></td>
+        <td><%= listing.seller %></td>
+      </tr>
+    <% end %>
+    </table>
+
+
+
+  </div>
+</div>
