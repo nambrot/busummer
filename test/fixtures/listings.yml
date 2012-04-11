@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  lowbudget: 1
+  highbudget: 1
+  start_date: 2012-04-10
+  end_date: 2012-04-10
+  location: MyString
+  description: MyString
+
+two:
+  name: MyString
+  email: MyString
+  lowbudget: 1
+  highbudget: 1
+  start_date: 2012-04-10
+  end_date: 2012-04-10
+  location: MyString
+  description: MyString
