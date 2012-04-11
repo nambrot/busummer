@@ -1,3 +1,3 @@
 class Listing < ActiveRecord::Base
-  attr_accessible :description, :email, :end_date, :highbudget, :location, :lowbudget, :name, :start_date
+  attr_accessible :description, :email, :end, :high_budget, :location, :low_budget, :name, :seller, :start
 end

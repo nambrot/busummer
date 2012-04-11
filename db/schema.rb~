@@ -11,20 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120411035539) do
+ActiveRecord::Schema.define(:version => 20120411034731) do
 
   create_table "listings", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "low_budget"
-    t.integer  "high_budget"
-    t.date     "start"
-    t.date     "end"
+    t.integer  "lowbudget"
+    t.integer  "highbudget"
+    t.date     "start_date"
+    t.date     "end_date"
     t.string   "location"
-    t.text     "description"
-    t.boolean  "seller"
+    t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.boolean  "seller"
   end
 
 end

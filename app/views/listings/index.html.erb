@@ -4,12 +4,13 @@
   <tr>
     <th>Name</th>
     <th>Email</th>
-    <th>Lowbudget</th>
-    <th>Highbudget</th>
-    <th>Start date</th>
-    <th>End date</th>
+    <th>Low budget</th>
+    <th>High budget</th>
+    <th>Start</th>
+    <th>End</th>
     <th>Location</th>
     <th>Description</th>
+    <th>Seller</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,12 +20,13 @@
   <tr>
     <td><%= listing.name %></td>
     <td><%= listing.email %></td>
-    <td><%= listing.lowbudget %></td>
-    <td><%= listing.highbudget %></td>
-    <td><%= listing.start_date %></td>
-    <td><%= listing.end_date %></td>
+    <td><%= listing.low_budget %></td>
+    <td><%= listing.high_budget %></td>
+    <td><%= listing.start %></td>
+    <td><%= listing.end %></td>
     <td><%= listing.location %></td>
     <td><%= listing.description %></td>
+    <td><%= listing.seller %></td>
     <td><%= link_to 'Show', listing %></td>
     <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
     <td><%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %></td>

@@ -20,20 +20,20 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :lowbudget %><br />
-    <%= f.number_field :lowbudget %>
+    <%= f.label :low_budget %><br />
+    <%= f.number_field :low_budget %>
   </div>
   <div class="field">
-    <%= f.label :highbudget %><br />
-    <%= f.number_field :highbudget %>
+    <%= f.label :high_budget %><br />
+    <%= f.number_field :high_budget %>
   </div>
   <div class="field">
-    <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
+    <%= f.label :start %><br />
+    <%= f.date_select :start %>
   </div>
   <div class="field">
-    <%= f.label :end_date %><br />
-    <%= f.date_select :end_date %>
+    <%= f.label :end %><br />
+    <%= f.date_select :end %>
   </div>
   <div class="field">
     <%= f.label :location %><br />
@@ -41,7 +41,11 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :seller %><br />
+    <%= f.check_box :seller %>
   </div>
   <div class="actions">
     <%= f.submit %>
