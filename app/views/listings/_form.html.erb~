@@ -44,7 +44,7 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    Check if you're subletting your place (leave blank if renting)<br />
+    Check if you're subletting (leave blank if renting)<br />
     <%= f.check_box :seller %>
   </div>
   <div class="actions">
